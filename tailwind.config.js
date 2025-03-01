@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        bgImage:
-          "url('./src/assets/imgonline-com-ua-Resize-C8GdU7QZd5JFB.jpg')",
+        bgImage: "url('/public/imgonline-com-ua-Resize-C8GdU7QZd5JFB.jpg')",
       },
     },
   },
