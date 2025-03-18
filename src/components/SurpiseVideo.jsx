@@ -4,7 +4,7 @@ import surprise2 from "../assets/9f.jpg"
 export default function SurpriseVideo() {
     return (
       <div className="px-8 py-4">
-        <h1 className="md:text-4xl text-2xl font-semibold">Видеопоздравление</h1>
+        <h1 className="md:text-4xl text-3xl font-semibold">Видеопоздравление</h1>
         <div className="pt-10 px-9 flex flex-col gap-5">
           <img src={surprise1} alt="1" />
           <img src={surprise2} alt="2" />
