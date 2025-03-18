@@ -12,6 +12,12 @@ import MoviesPage from "./components/MoviesPage"
 export default function Home() {
   const [stateBg, setStateBg] = useState("")
   const [filmName,setFilmName] = useState("")
+  const[commentHd,setCommentHd] = useState(null)
+  useEffect(()=>{
+    console.log(`Первый ${commentHd}`);
+
+  },[commentHd])
+  
    useEffect(()=>{
     setFilmName("")
    },[stateBg])
@@ -33,8 +39,12 @@ export default function Home() {
    
     return (
       <div className="md:py-44 lg:px-36 py-0 md:px-12">
-        <Header />
-        <Afisha updateBg={setStateBg} />
+        <Header setComment={setCommentHd} getFalse={commentHd} />
+        <Afisha
+          updateBg={setStateBg}
+          checkComment={commentHd}
+          setCommentAf={setCommentHd}
+        />
         {filmName !== "" ? (
           <MoviesPage filmName={filmName} setFilmName={setFilmName} />
         ) : (

@@ -13,13 +13,26 @@ const array = [
   "Написать отзыв",
 ];
 
-export default function Afisha({ updateBg}) {
+export default function Afisha({ updateBg ,checkComment,setCommentAf}) {
   const [comment, setComment] = useState(false);
   const [bg, setBg] = useState("Афиша");
   const [data, setData] = useState("");
+  console.log(`Второй ${comment}`);
+  
   useEffect(() => {
     updateBg(bg);
   }, [bg, updateBg]);
+  useEffect(()=>{
+    setComment(checkComment)
+  },[checkComment])
+
+ useEffect(()=>{
+  if (comment) {
+    setCommentAf(comment)
+    
+  } else setCommentAf(false)
+ },[comment])
+
   function validComment(e) {
     e.preventDefault();
     if (data !== "") {
@@ -27,6 +40,7 @@ export default function Afisha({ updateBg}) {
       setComment(false);
     }
   }
+
 
   useEffect(() => {
     if (bg == "Написать отзыв") {
@@ -57,13 +71,16 @@ export default function Afisha({ updateBg}) {
             </li>
           );
         })}
+        
         <WriteComment open={comment}>
           <div className="text-black px-8 pb-8 pt-5">
             <h1 className="text-center text-wrap mx-2 text-xl font-semibold px-5 py-2 border-b-[1px] border-solid border-gray-200">
               Написать отзыв
               <i
-                onClick={() => setComment(false)}
-                class="bx bx-x-circle absolute top-6 right-10 text-3xl hover:rotate-90 cursor-pointer transition-all"
+                onClick={() => {
+                  setComment(false);
+                } }
+                className="bx bx-x-circle absolute top-6 right-10 text-3xl hover:rotate-90 cursor-pointer transition-all"
               ></i>
             </h1>
             <section className="px-10">

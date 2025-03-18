@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {arrayOne} from "./arrayOne"
-import { Link } from "react-router-dom";
 
 export default function PageOne({ setFilmName}) {
   const [data, setData] = useState("");
@@ -28,11 +27,16 @@ export default function PageOne({ setFilmName}) {
               <img
                 src={data.img}
                 alt="movie-1"
-                className="hover:scale-105 transition-all"
+                className="hover:scale-110 transition-all duration-300"
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h2 className="md:text-3xl text-xl font-semibold md:w-52 w-40 hover:text-red-500 transition-all">
+              <h2
+                onClick={() => {
+                  setData(data.textH2);
+                }}
+                className="md:text-3xl text-xl font-semibold md:w-52 w-40 hover:text-red-500 transition-all"
+              >
                 {data.textH2}
               </h2>
               <ul className="flex gap-2 flex-wrap md:w-48 w-36">
