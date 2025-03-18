@@ -8,7 +8,7 @@ export default function WriteComment({children,open}) {
         } else dialog.current.close()
     },[open])
     return (
-        <dialog ref={dialog} className="rounded-lg md:top-24 -top-28 ">
+        <dialog ref={dialog} className="rounded-lg md:top-24 -top-14 ">
             {children}
         </dialog>
     )
