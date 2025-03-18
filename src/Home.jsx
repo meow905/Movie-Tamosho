@@ -7,6 +7,9 @@ import EventPage from "./components/EventPage";
 import SoonInCinema from "./components/SoonInCinema";
 import Footer from "./components/Footer";
 import MoviesPage from "./components/MoviesPage"
+import PartnerPage from "./components/PartnerPage";
+import SurpriseVideo from "./components/SurpiseVideo";
+import ContactsPage from "./components/ContactsPage";
 
 
 export default function Home() {
@@ -30,20 +33,21 @@ export default function Home() {
   
     const pages = {
       Афиша: <PageOne setFilmName={setFilmName} setStateBg={setStateBg} />,
-      Сеансы: <PageOne />,
       Кинотеатр: <CinemaPage />,
       Мероприятия: <EventPage />,
+      Партнерам : <PartnerPage/>,
+      Видеопоздравления: <SurpriseVideo/>,
+      Контакты: <ContactsPage/>,
       Войти: <PageOne />,
       "": <PageOne />,
     };
    
     return (
       <div className="md:py-44 lg:px-36 py-0 md:px-12">
-        <Header setComment={setCommentHd} getFalse={commentHd} />
+        <Header setComment={setCommentHd} />
         <Afisha
           updateBg={setStateBg}
           checkComment={commentHd}
-          setCommentAf={setCommentHd}
         />
         {filmName !== "" ? (
           <MoviesPage filmName={filmName} setFilmName={setFilmName} />

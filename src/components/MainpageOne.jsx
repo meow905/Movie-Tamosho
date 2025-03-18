@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {arrayOne} from "./arrayOne"
 
-export default function PageOne({ setFilmName}) {
+export default function PageOne({setFilmName}) {
   const [data, setData] = useState("");
   useEffect(() => {
     if (setFilmName) {
@@ -49,7 +49,12 @@ export default function PageOne({ setFilmName}) {
               </ul>
 
               <div className="flex gap-2 flex-wrap w-full">
-                <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
+                <ul 
+                  // onClick={(e)=>{
+                  //  if (e.target.tagName == "LI") {
+
+                  //  }}} 
+                   className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
                   <li className="text-center">{data.time1}</li>
                   <li className="bg-white">{data.price1}</li>
                 </ul>

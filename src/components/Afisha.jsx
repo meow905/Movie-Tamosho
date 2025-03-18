@@ -13,7 +13,7 @@ const array = [
   "Написать отзыв",
 ];
 
-export default function Afisha({ updateBg ,checkComment,setCommentAf}) {
+export default function Afisha({ updateBg ,checkComment}) {
   const [comment, setComment] = useState(false);
   const [bg, setBg] = useState("Афиша");
   const [data, setData] = useState("");
@@ -23,15 +23,12 @@ export default function Afisha({ updateBg ,checkComment,setCommentAf}) {
     updateBg(bg);
   }, [bg, updateBg]);
   useEffect(()=>{
-    setComment(checkComment)
+    if (checkComment != null) {
+      
+      setComment(checkComment)
+    }
   },[checkComment])
 
- useEffect(()=>{
-  if (comment) {
-    setCommentAf(comment)
-    
-  } else setCommentAf(false)
- },[comment])
 
   function validComment(e) {
     e.preventDefault();

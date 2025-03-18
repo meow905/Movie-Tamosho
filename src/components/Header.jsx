@@ -4,22 +4,18 @@ import Numbers from "./miniComponents/chevronNumbers";
 import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
 
-export default function Header({setComment,getFalse}) {
+export default function Header({setComment}) {
   const [menu, setMenu] = useState(false);
   const [chevron ,setChevron]= useState(false)
   const [commentHeader,setCommentHeader] = useState(null)
 
-  // useEffect(()=>{
-   
-  //     setCommentHeader(getFalse)
-  //     console.log(commentHeader);
-      
-    
-  // },[commentHeader])
+
 
   useEffect(()=>{
    setComment(commentHeader)
-   
+  setTimeout(() => {
+    setCommentHeader(null)
+  }, 400);
   },[commentHeader])
   document.addEventListener("keydown",(event)=>{
     if (chevron && event.code == "Escape") {
@@ -111,7 +107,7 @@ export default function Header({setComment,getFalse}) {
            </Link>
          </div>
          <div className="md:hidden flex items-center gap-5">
-           <button className=" sm:block hidden px-3 my-2 py-1 bg-yellow-400 rounded-full  transition-all">
+           <button className="sm:block hidden px-3 my-2 py-1 bg-yellow-400 rounded-full  transition-all">
              Войти
            </button>
            {menu ? (
