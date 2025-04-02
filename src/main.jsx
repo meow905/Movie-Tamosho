@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "NotFoundTicket",
+    path: "/NotFoundTicket",
     element : <NotFoundTicket/>
   },
 ]);
