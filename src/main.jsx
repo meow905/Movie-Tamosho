@@ -20,7 +20,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   
   <div className="bg-bgImage bg-top bg-no-repeat bg-fixed min-h-[100vh] overflow-clip">
+   
     <RouterProvider router={router}/>
+    
   </div>
 
 )
