@@ -1,6 +1,7 @@
 import SoonInCinema from "./SoonInCinema";
 import { arrayOne } from "./arrayOne";
 import YouTube from "react-youtube";
+import TicketBox from "./miniComponents/ticketBox";
 
 export default function MoviesPage({ filmName, setFilmName }) {
   const opts = {
@@ -43,24 +44,11 @@ export default function MoviesPage({ filmName, setFilmName }) {
             <h2 className="md:text-6xl text-3xl font-semibold py-2">
               {selectedMovie.textH2}
             </h2>
-            <div className="flex gap-2 py-5 flex-wrap">
-              <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                <li className="text-center">{selectedMovie.time1}</li>
-                <li className="bg-white">{selectedMovie.price1}</li>
-              </ul>
-              {selectedMovie.time2 && selectedMovie.price2 !== "" && (
-                <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                  <li className="text-center">{selectedMovie.time2}</li>
-                  <li className="bg-white">{selectedMovie.price2}</li>
-                </ul>
-              )}
-              {selectedMovie.time3 && selectedMovie.price3 !== "" && (
-                <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                  <li className="text-center">{selectedMovie.time3}</li>
-                  <li className="bg-white">{selectedMovie.price3}</li>
-                </ul>
-              )}
+            <div className="py-4">
+            <TicketBox data={selectedMovie}/>
+
             </div>
+          
             <div className="video-container w-[100%] max-w-[800px]">
               <YouTube videoId={selectedMovie.urlKey} opts={opts} />
               {/* {https://youtu.be/tTwFeGArcrs} */}

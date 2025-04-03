@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
 import {arrayOne} from "./arrayOne"
+import TicketBox from "./miniComponents/ticketBox";
+
 
 export default function PageOne({setFilmName}) {
   const [data, setData] = useState("");
+  
+  
+
   useEffect(() => {
     if (setFilmName) {
       setFilmName(data);
     }
   }, [data, setFilmName]);
-  console.log(data);
+ 
+
+
 
   return (
     <div className="flex flex-wrap lg:gap-8 md:gap-4 lg:px-14 md:px-5 px-2 py-5">
@@ -48,30 +55,7 @@ export default function PageOne({setFilmName}) {
                 )}
               </ul>
 
-              <div className="flex gap-2 flex-wrap w-full">
-                <ul 
-                  // onClick={(e)=>{
-                  //  if (e.target.tagName == "LI") {
-
-                  //  }}} 
-                   className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                  <li className="text-center">{data.time1}</li>
-                  <li className="bg-white">{data.price1}</li>
-                </ul>
-                {data.time2 && data.price2 !== "" && (
-                  <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                    <li className="text-center">{data.time2}</li>
-                    <li className="bg-white">{data.price2}</li>
-                  </ul>
-                )}
-                {data.time3 && data.price3 !== "" && (
-                  <ul className="w-max rounded-sm border-[1px] border-yellow-500 bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-all">
-                    <li className="text-center">{data.time3}</li>
-                    <li className="bg-white">{data.price3}</li>
-                  </ul>
-                )}
-              </div>
-              <p>{data.location}</p>
+             <TicketBox data={data}/>
             </div>
           </div>
         );

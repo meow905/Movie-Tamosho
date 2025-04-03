@@ -6,7 +6,7 @@ export default function SoonInCinema() {
         <div className="flex md:flex-wrap flex-nowrap md:gap-6 gap-4 overflow-auto">
           {arrayTwo.map((item) => {
             return (
-              <div>
+              <div key={item.name}>
                 <div className="lg:w-[200px] w-[100px] overflow-hidden rounded-lg">
                   <img
                     src={item.img}
