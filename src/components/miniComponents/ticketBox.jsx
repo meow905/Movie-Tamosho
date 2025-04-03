@@ -153,7 +153,7 @@ export default function TicketBox({data}) {
             {[...Array(5)].map((_, rowIndex) => (
               <div
                 key={rowIndex}
-                className="flex items-center md:gap-4 gap-1  justify-between"
+                className="flex items-center md:gap-4 gap-2  justify-between"
               >
                 <span className="font-bold">{rowIndex + 1}</span>
                 {[...Array(10)].map((_, colIndex) => {
