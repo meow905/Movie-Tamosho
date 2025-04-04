@@ -23,7 +23,7 @@ export default function PageOne({setFilmName}) {
         return (
           <div
             key={data.textH2}
-            className="flex flex-grow items-start md:flex-col flex-row gap-4 cursor-pointer md:mb-0 mb-5"
+            className="flex  items-start md:flex-col flex-row gap-4 cursor-pointer md:mb-0 mb-5"
           >
             <div
               onClick={() => {

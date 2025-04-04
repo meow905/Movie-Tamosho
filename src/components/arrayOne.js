@@ -13,6 +13,12 @@ import bigKush from "./images/bigKush.webp"
 import darkKnight from "./images/darkKnight.webp"
 import inception from "./images/inception.webp"
 import movie2 from "./images/movie-2.webp"
+import koko from "./images/koko.webp"
+import jentelman from "./images/jentelman.webp"
+import bigFather from "./images/bigFather.webp"
+import shrek from "./images/shrek.webp"
+import oldMan from "./images/noCountryforOldMan.webp";
+
 
 export const arrayOne = [
   {
@@ -130,7 +136,7 @@ export const arrayOne = [
   {
     img: image8,
     textH2: "Терминатор 2: Судный день",
-    rating: "18+",
+    rating: "16+",
     genre1: "триллер",
     genre2: "фантастика",
     genre3: "боевик",
@@ -146,7 +152,7 @@ export const arrayOne = [
   {
     img: image9,
     textH2: "Гладиатор",
-    rating: "18+",
+    rating: "16+",
     genre1: "история",
     genre2: "драма",
     genre3: "боевик",
@@ -158,6 +164,38 @@ export const arrayOne = [
     price3: "",
     location: "Зал 2",
     urlKey: "F2Dr7Qb2Zf8",
+  },
+  {
+    img: shrek,
+    textH2: "Шрэк",
+    rating: "12+",
+    genre1: "мультфильм",
+    genre2: "комедия",
+    genre3: "приключения",
+    time1: "12:15",
+    price1: "2D от 40 с.",
+    time2: "16:00",
+    price2: "3D от 45 c.",
+    time3: "21:20",
+    price3: "2D от 50 с.",
+    location: "Зал 1",
+    urlKey: "CwXOrWvPBPk",
+  },
+  {
+    img: oldMan,
+    textH2: "Старикам тут не место",
+    rating: "18+",
+    genre1: "триллер",
+    genre2: "криминал",
+    genre3: "вестерн",
+    time1: "19:50",
+    price1: "2D от 45 с.",
+    time2: "23:10",
+    price2: "2D от 50 с.",
+    time3: "",
+    price3: "",
+    location: "Зал 3",
+    urlKey: "ZY0DG8rUnCA",
   },
 ];
 
@@ -192,5 +230,20 @@ export const arrayTwo = [
     name: "Достучаться до небес",
     img: movie2,
     when: "с 30 мая 2025",
+  },
+  {
+    name: "Тайна Коко",
+    img: koko,
+    when: "с 12 июня 2025",
+  },
+  {
+    name: "Джентльмены",
+    img: jentelman,
+    when: "с 20 июня 2025",
+  },
+  {
+    name: "Крестный отец",
+    img: bigFather,
+    when: "с 28 июня 2025",
   },
 ];
